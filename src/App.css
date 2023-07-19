@@ -72,17 +72,10 @@
 }
 .bolo_capa{
   width: 100%;
-  height: 65vh;
+  height: 57vh;
   object-fit: scale-down;
     background-image: linear-gradient(45deg, black, transparent);
 }
-/* .c1{
-  background-image: url('./IMG/bolo-layout-4.jpg');
-  width: 90vw;
-  background-position: center;
-  background-size: cover;
-  height: 80vh;
-} */
 .arm{
   display: flex;
   width: 28vw;
@@ -312,7 +305,7 @@ li{
       flex-direction: column;
   }
   .bolo_capa{
-    width: 100%;
+  width: 100%;
   height: 65vh;
   object-fit: cover;
   }
