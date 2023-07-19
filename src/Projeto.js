@@ -24,35 +24,39 @@ export default function Projeto(props){
                 </div>
             </div>
             {/* ================================== NAV ========================================== */}
+            <div className="contents">
+                <div className="conteudo">
+                    {/* <div className="c1"></div> */}
+                    <img className="bolo_capa" src={bolo_capa} alt="Bolo" />
+                </div>
+                
+                <div className="conteudo">
+                    
+                    <div className="arm">
+                        <div className="c2">
+                            <h2 className="h2">MEUS <span>BOLOS</span> SÃO <div>CONFECCIONADOS</div> COM AMOR.</h2>
+                            <div className="textC2">
+                                <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto. É fácil! Basta clicar em “Editar Texto” ou clicar duas vezes sobre mim e você poderá adicionar o seu próprio conteúdo e trocar fontes. Sou um ótimo espaço para você contar sua história.</p>
+                            </div>                        </div>
+                    </div>
 
-            <div className="conteudo">
-                {/* <div className="c1"></div> */}
-                <img className="bolo_capa" src={bolo_capa} alt="Bolo" />
+                    <div className="arm">
+                        <div className="c3"></div>
+                    </div>
+
+                </div>
+
+                <div className="conteudo">
+
+                    <div className="arm c4"> <a className=" box-pedido" href="https://jsonplaceholder.typicode.com/todos"><div className="pedido">Faça seu pedido online</div></a> </div>
+
+                    <div className="arm c5"> <a className=" box-pedido" href="https://jsonplaceholder.typicode.com/todos"><div className="pedido">Conheça o confeiteiro</div></a> </div>
+
+                    <div className="arm c6"> <a className=" box-pedido" href="https://jsonplaceholder.typicode.com/todos"><div className="pedido">Personalize o seu bolo</div></a> </div>
+                </div>
+
             </div>
             
-            <div className="conteudo">
-                
-                <div className="arm">
-                    <div className="c2">
-                        <h2 className="h2">MEUS <span>BOLOS</span> SÃO <div>CONFECCIONADOS</div> COM AMOR.</h2>
-                        <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto. É fácil! Basta clicar em “Editar Texto” ou clicar duas vezes sobre mim e você poderá adicionar o seu próprio conteúdo e trocar fontes. Sou um ótimo espaço para você contar sua história.</p>
-                    </div>
-                </div>
-
-                <div className="arm no">
-                    <div className="c3"></div>
-                </div>
-
-            </div>
-
-            <div className="conteudo bps">
-
-                <div className="arm c4"> <a className=" box-pedido" href="https://jsonplaceholder.typicode.com/todos"><div className="pedido">Faça seu pedido online</div></a> </div>
-
-                <div className="arm c5"> <a className=" box-pedido" href="https://jsonplaceholder.typicode.com/todos"><div className="pedido">Conheça o confeiteiro</div></a> </div>
-
-                <div className="arm c6"> <a className=" box-pedido" href="https://jsonplaceholder.typicode.com/todos"><div className="pedido">Personalize o seu bolo</div></a> </div>
-            </div>
             {/* ============================================================================================= */}
         
             <div className="footerOrigin">
