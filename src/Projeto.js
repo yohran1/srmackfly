@@ -1,5 +1,5 @@
 import React from "react";
-
+import bolo_capa from './IMG/bolo-layout-4.jpg'
 
 export default function Projeto(props){
 
@@ -26,7 +26,8 @@ export default function Projeto(props){
             {/* ================================== NAV ========================================== */}
 
             <div className="conteudo">
-                <div className="c1"></div>
+                {/* <div className="c1"></div> */}
+                <img className="bolo_capa" src={bolo_capa} alt="Bolo" />
             </div>
             
             <div className="conteudo">
