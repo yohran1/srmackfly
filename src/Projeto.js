@@ -74,17 +74,18 @@ export default function Projeto(props){
                     <input type="radio" name="radio-btn" id="radio4" />
 
                     <div className="slide first">
-                        <img className="bolo_slide1" src={bolo_slide1} alt="Bolo_slide"></img>
+                        <img src={bolo_slide1} alt="Bolo_slide"></img>
                     </div>
                     <div className="slide">
-                        <img className="bolo_slide1" src={bolo_slide2} alt="Bolo_slide"></img>
+                        <img src={bolo_slide2} alt="Bolo_slide"></img>
                     </div>
                     <div className="slide first">
-                        <img className="bolo_slide1" src={bolo_slide3} alt="Bolo_slide"></img>
+                        <img src={bolo_slide3} alt="Bolo_slide"></img>
                     </div>
                     <div className="slide first">
-                        <img className="bolo_slide1" src={bolo_slide4} alt="Bolo_slide"></img>
+                        <img src={bolo_slide4} alt="Bolo_slide"></img>
                     </div>
+                
 
                     <div className="navigation-auto">
                         <div className="auto-btn1"></div>

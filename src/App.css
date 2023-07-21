@@ -5,7 +5,10 @@
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
 }
-
+body{
+  width: 100vw;
+  height: 100vh;
+}
 .menu ul li{ 
   list-style: none;
 }
@@ -85,9 +88,11 @@
 .no{
   background-color: transparent;
 }
+/* ====================================== Carrocel ================================================= */
 .slider{
+  /* position: absolute; */
   margin: 0 auto;
-  width: 80%;
+  width: 60%;
   height: 400px;
   overflow: hidden;
 }
@@ -125,16 +130,14 @@
 }
 .slide{
   width: 25%;
-  position: relative;
+  transition: 1s;
+  /* position: relative; */
 }
 .slide img{
   width: 100%;
-  
+  height: 100%;
 }
-.bolo_slide1{
-
-}
-.navigation-auto div{
+/* .navigation-auto div{
   border: 2px solid blue;
   padding: 5px;
   border-radius: 10px;
@@ -150,19 +153,17 @@
 }
 .navigation-auto div:not(:last-child){
   margin-right: 40px;
-}
-.auto-btn1{
-
-}
+} */
 .manual-navigation{
   position: absolute;
-  width: 100%;
-  margin-top: -40px;
+  
+  left: 50%;
+  transform: translate(-50%);
   display: flex;
-  justify-content: center;
+  
 }
 .manual-btn{
-  border: 2px solid white;
+  border: 2px solid aquamarine;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -172,8 +173,9 @@
   margin-right: 40px;
 }
 .manual-btn:hover{
-  background-color: white;
+  background-color: aquamarine;
 }
+/* ================================================================================================================ */
 .c2{
   text-align: center;
   margin: auto;
