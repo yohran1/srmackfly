@@ -5,6 +5,8 @@ import bolo_slide1 from './IMG/bolo-dourado-com-flores.jpg'
 import bolo_slide2 from './IMG/bolo-layout-1.jpg'
 import bolo_slide3 from './IMG/bolo-layout-2.jpg'
 import bolo_slide4 from './IMG/bolo-layout-3.jpg'
+import bolo_slide5 from './IMG/bolo-layout-5.jpg'
+import bolo_slide6 from './IMG/bolo-layout-6.jpg'
 
 export default function Projeto(props){
 
@@ -64,14 +66,17 @@ export default function Projeto(props){
             <hr></hr>
             <br></br>
             {/* ============================================================================================= */}
-
-            <div className="slider">
+            <p>MEU ACERVO DE BOLOS</p>
+            <br></br>
+            <div className="slides">
                 <div className="elements">
 
                     <input type="radio" name="radio-btn" id="radio1" />
                     <input type="radio" name="radio-btn" id="radio2" />
                     <input type="radio" name="radio-btn" id="radio3" />
                     <input type="radio" name="radio-btn" id="radio4" />
+                    <input type="radio" name="radio-btn" id="radio5" />
+                    <input type="radio" name="radio-btn" id="radio6" />
 
                     <div className="slide first">
                         <img src={bolo_slide1} alt="Bolo_slide"></img>
@@ -79,29 +84,30 @@ export default function Projeto(props){
                     <div className="slide">
                         <img src={bolo_slide2} alt="Bolo_slide"></img>
                     </div>
-                    <div className="slide first">
+                    <div className="slide">
                         <img src={bolo_slide3} alt="Bolo_slide"></img>
                     </div>
-                    <div className="slide first">
+                    <div className="slide">
                         <img src={bolo_slide4} alt="Bolo_slide"></img>
                     </div>
-                
-
-                    <div className="navigation-auto">
-                        <div className="auto-btn1"></div>
-                        <div className="auto-btn2"></div>
-                        <div className="auto-btn3"></div>
-                        <div className="auto-btn4"></div>
+                    <div className="slide">
+                        <img src={bolo_slide5} alt="Bolo_slide"></img>
                     </div>
-
-                    <div className="manual-navigation">
-                        <label htmlFor="radio1" className="manual-btn"></label>
-                        <label htmlFor="radio2" className="manual-btn"></label>
-                        <label htmlFor="radio3" className="manual-btn"></label>
-                        <label htmlFor="radio4" className="manual-btn"></label>
+                    <div className="slide">
+                        <img src={bolo_slide6} alt="Bolo_slide"></img>
                     </div>
-
                 </div>
+
+                    <div className="navigation">
+                        <label htmlFor="radio1" className="barra"></label>
+                        <label htmlFor="radio2" className="barra"></label>
+                        <label htmlFor="radio3" className="barra"></label>
+                        <label htmlFor="radio4" className="barra"></label>
+                        <label htmlFor="radio5" className="barra"></label>
+                        <label htmlFor="radio6" className="barra"></label>
+                    </div>
+
+                
             </div>
 
             {/* ============================================================================================= */}
