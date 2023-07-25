@@ -22,11 +22,11 @@ export default function Projeto(props){
                     
                 <div className="menu">
                     <ul id="lista">
-                        <li>Página Inicial</li>
                         <li>Peça Online</li>
                         <li>Contato</li>
                         <li>Sobre</li>
                         <li>Feedback</li>
+                        <li>Login | Register</li>
                     </ul>
                 </div>
             </div>
