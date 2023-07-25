@@ -11,13 +11,16 @@ body{
 .container{
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card{
     position: absolute;
     width: 30%;
     height: 50%;
     background-color: gray;
-    transform: translate(110%, 50%);
+    
 }
 .description{
     display: flex;
@@ -49,4 +52,12 @@ button{
     border: none;
     margin: auto;
 }
+
+@media (max-width: 750px){
+    .card{
+        width: 80%;
+        height: 50%;
+    }
+}
+
 
