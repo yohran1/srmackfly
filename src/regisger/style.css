@@ -8,15 +8,15 @@
     --color-dark-50: #797984;
     --color-dark-100: #312d37;
     --color-dark-900: #000;
-    --color-purple-50: #7c3aed;
-    --color-purple-100: #a855f7;
-    --color-purple-200: #bf46ef;
-    --color-gradient: linear-gradient(90deg, var(var(--color-purple-50), var(--color-purple-100), var(--color-purple-200)))
+    --color-purple-50: #7c3aed42;
+    --color-purple-100: #a955f7da;
+    --color-purple-200: #bf46ef34;
+    --color-gradient: linear-gradient(90deg, var(--color-purple-50), var(--color-purple-100), var(--color-purple-200))
 }
 .container{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(72deg, aqua 1%, violet 99%);
+    background: var(--color-gradient);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,7 @@ form{
     border-radius: 8px;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
     height: fit-content;
+    animation: dark-to-light 0.3s ease-in-out;
 }
 .header{
     display: flex;
@@ -48,7 +49,7 @@ form{
     width: 40%;
     background-color: var(--color-purple-50);
     height: 3px;
-    bottom: 10px;
+    bottom: 5px;
     border-radius: 5px;
 }
 .icon-moon{
@@ -89,11 +90,14 @@ form{
     border: none;
     background-color: transparent;
     width: 260px;
-    font-size: 18px;
+    font-size: 15px;
     padding: 0 5px;
 }
 .input input:focus{
     outline: none;
+}
+.forgot-password{
+    margin-bottom: 20px;
 }
 .forgot-password a{
     text-decoration: none;
@@ -101,7 +105,7 @@ form{
     color: var(--color-dark-500);
 }
 .forgot-password a:hover{
-    color: var(--color-purple-50);
+    color: var(--color-purple-100);
 }
 .login-btn{
     border: none;
@@ -115,4 +119,33 @@ form{
 }
 .login-btn:hover{
     transform: scale(1.05);
+}
+/* ======================= DARK ======================== */
+.dark#form{
+    color: var(--color-light-50);
+    background-color: var(--color-dark-100);
+    animation: light-to-dark 0.3s ease-in-out;
+
+}
+.dark#form .input input,
+.dark#form .input i{
+    color: var(--color-light-50);
+
+}
+
+@keyframes dark-to-light {
+    0% {
+        background-color: var(--color-dark-100);
+    }
+    100% {
+        background-color: var(--color-light-50);
+    }
+}
+@keyframes light-to-dark {
+    0% {
+        background-color: var(--color-light-50);
+    }
+    100%{
+        background-color: var(--color-dark-100);
+    }
 }

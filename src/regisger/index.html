@@ -11,10 +11,10 @@
     
     <div class="container">
 
-        <form>
+        <form id="form">
             <div class="header">
                 <h1>Login</h1>
-                <i class="fa-solid fa-moon icon-moon"></i>
+                <i class="fa-solid fa-moon icon-moon"> theme</i>
             </div>
             <div class="social_media">
                 <a href="https://www.facebook.com/yohran.venancio/">
@@ -33,7 +33,7 @@
                         Name
                         <div class="input">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" id="name" name="name" placeholder="Nome...">
+                            <input type="text" id="name" name="name" >
                         </div>
                     </label>
                 </div>
@@ -42,7 +42,7 @@
                         Email
                         <div class="input">
                             <i class="fa-solid fa-envelope"></i>
-                            <input type="email" id="email" name="name" placeholder="Email...">
+                            <input type="email" id="email" name="name" >
                         </div>
                     </label>
                 </div>
@@ -51,12 +51,12 @@
                         Password
                         <div class="input">
                             <i class="fa-solid fa-key"></i>
-                            <input type="email" id="password" name="name" placeholder="Senha...">
+                            <input type="password" id="password" name="name">
                         </div>
                     </label>
-                    <div class="forgot-password">
-                        <a href="#">Esqueceu sua senha?</a>
-                    </div>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Esqueceu sua senha?</a>
                 </div>
             </div>
             <button type="submit" class="login-btn">Login</button>
@@ -64,5 +64,6 @@
 
     </div>
 
+    <script src="./script.js"></script>
 </body>
 </html>
