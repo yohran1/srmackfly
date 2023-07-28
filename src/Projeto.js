@@ -65,7 +65,7 @@ export default function Projeto(props){
                 {/* ============================================================================================= */}
                 <p>MEU ACERVO DE BOLOS</p>
                 <br></br>
-                <div className="slides">
+                {/* <div className="slides">
                     <div className="elements">
 
                         <input type="radio" name="radio-btn" id="radio1" />
@@ -103,7 +103,32 @@ export default function Projeto(props){
                             <label htmlFor="radio5" className="barra"></label>
                             <label htmlFor="radio6" className="barra"></label>
                         </div>   
+                </div> */}
+
+                <div className="slides">
+                    <button className="arrow-left control" aria-label="Previous Image">◀</button>
+                    <button className="arrow-right control" aria-label="Next Image">▶</button>
+                    
+                    <div className="elements">
+
+                        <div className="gallery">
+                            <img src={bolo_slide1} className="item atual-item" alt="Bolo_slide"></img>
+                            <img src={bolo_slide2} className="item atual-item" alt="Bolo_slide"></img>
+                            <img src={bolo_slide3} className="item atual-item" alt="Bolo_slide"></img>
+                            <img src={bolo_slide4} className="item atual-item" alt="Bolo_slide"></img>
+                            <img src={bolo_slide5} className="item atual-item" alt="Bolo_slide"></img>
+                            <img src={bolo_slide6} className="item atual-item" alt="Bolo_slide"></img>
+                        </div>
+
+                    </div>
                 </div>
+
+
+
+
+
+
+
 
             </div>
             {/* ============================================================================================= */}
@@ -164,3 +189,39 @@ export default function Projeto(props){
          
     )
 }
+
+const controls = document.querySelectorAll('.control')
+let atual_item = 0
+const items = document.querySelectorAll('.item')
+const max_items = items.length
+
+controls.forEach(control => {
+    control.addEventListener('click', ()=>{
+        const isLeft = control.classList.contains('arrow-left')    
+        
+        if(isLeft){
+            atual_item -= 1
+        }else{
+            atual_item += 1
+        }
+
+        if(atual_item >= max_items){
+            atual_item = 0
+        }
+        if(atual_item < 0){
+            atual_item = max_items - 1
+        }
+
+        items.forEach(item => {
+            item.classList.remove('atual-item')
+
+            items[atual_item].scrollIntoView({
+                inline: 'center',
+                behavior: 'smooth'
+            })
+
+            items[atual_item].classList.add('atual-item')
+        })
+    
+    })
+})
