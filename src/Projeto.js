@@ -26,7 +26,7 @@ export default function Projeto(props){
                         <li>Contato</li>
                         <li>Sobre</li>
                         <li>Feedback</li>
-                        <li>Login | Register</li>
+                        <li>Login / Register</li>
                     </ul>
                 </div>
             </div>
