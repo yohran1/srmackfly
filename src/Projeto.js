@@ -16,6 +16,7 @@ const data = [
     { id: '4', image: {bolo_4} },
     { id: '5', image: {bolo_5} }
 ]
+const Data = [bolo_1, bolo_2, bolo_3, bolo_4, bolo_5]
 
 
 export default function Projeto(props){
@@ -73,7 +74,7 @@ export default function Projeto(props){
 
                 {/* </div> */}
                 {/* ============================================================================================= */}
-                <div>
+                <div className="slide">
                 <p>MEU ACERVO DE BOLOS</p>
                 <br></br>
 
@@ -81,79 +82,21 @@ export default function Projeto(props){
                     slidesPerView={1}
                     pagination={{clickable: true}}
                     navigation
+                    loop
+                    
                 >
-                    {data.map((item) => {
-                        <SwiperSlide key={item.id}>
+                    {Data.map((item, index) => {
+                        return (
+                        <SwiperSlide key={index}>
                             <img 
-                                src={item.image}
+                                src={item}
                                 alt="slide"
                                 className="slide-item"
                              />
                         </SwiperSlide>
-                    })}
+                        )})}
                 </Swiper>
-
                 </div>
-
-
-
-
-
-                {/* <div className="slides">
-                    <div className="elements">
-
-                        <input type="radio" name="radio-btn" id="radio1" />
-                        <input type="radio" name="radio-btn" id="radio2" />
-                        <input type="radio" name="radio-btn" id="radio3" />
-                        <input type="radio" name="radio-btn" id="radio4" />
-                        <input type="radio" name="radio-btn" id="radio5" />
-                        <input type="radio" name="radio-btn" id="radio6" />
-
-                        <div className="slide first">
-                            <img src={bolo_1} alt="Bolo_slide"></img>
-                        </div>
-                        <div className="slide">
-                            <img src={bolo_2} alt="Bolo_slide"></img>
-                        </div>
-                        <div className="slide">
-                            <img src={bolo_3} alt="Bolo_slide"></img>
-                        </div>
-                        <div className="slide">
-                            <img src={bolo_4} alt="Bolo_slide"></img>
-                        </div>
-                        <div className="slide">
-                            <img src={bolo_5} alt="Bolo_slide"></img>
-                        </div>
-                        
-                    </div>
-
-                        <div className="navigation">
-                            <label htmlFor="radio1" className="barra"></label>
-                            <label htmlFor="radio2" className="barra"></label>
-                            <label htmlFor="radio3" className="barra"></label>
-                            <label htmlFor="radio4" className="barra"></label>
-                            <label htmlFor="radio5" className="barra"></label>
-                            <label htmlFor="radio6" className="barra"></label>
-                        </div>   
-                </div> */}
-
-                {/* <div className="slides">
-                    <button className="arrow-left control" aria-label="Previous Image">◀</button>
-                    <button className="arrow-right control" aria-label="Next Image">▶</button>
-                    
-                    <div className="elements">
-
-                        <div className="gallery">
-                            <img src={bolo_slide1} className="item atual-item" alt="Bolo_slide"></img>
-                            <img src={bolo_slide2} className="item atual-item" alt="Bolo_slide"></img>
-                            <img src={bolo_slide3} className="item atual-item" alt="Bolo_slide"></img>
-                            <img src={bolo_slide4} className="item atual-item" alt="Bolo_slide"></img>
-                            <img src={bolo_slide5} className="item atual-item" alt="Bolo_slide"></img>
-                            <img src={bolo_slide6} className="item atual-item" alt="Bolo_slide"></img>
-                        </div>
-
-                    </div>
-                </div> */}
             </div>
             {/* ============================================================================================= */}
             <div className="footerOrigin">
