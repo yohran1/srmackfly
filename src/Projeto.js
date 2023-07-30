@@ -1,12 +1,22 @@
 import React from "react";
 import bolo_capa from './IMG/bolo-layout-4.jpg'
 import bolo_c3 from './IMG/bolo-branco.webp'
-import bolo_slide1 from './IMG/bolo-dourado-com-flores.jpg'
-import bolo_slide2 from './IMG/bolo-layout-1.jpg'
-import bolo_slide3 from './IMG/bolo-layout-2.jpg'
-import bolo_slide4 from './IMG/bolo-layout-3.jpg'
-import bolo_slide5 from './IMG/bolo-layout-5.jpg'
-import bolo_slide6 from './IMG/bolo-layout-6.jpg'
+import bolo_1 from './IMG/bolo-1.jpg'
+import bolo_2 from './IMG/bolo-2.jpg'
+import bolo_3 from './IMG/bolo-3.jpg'
+import bolo_4 from './IMG/bolo-4.jpg'
+import bolo_5 from './IMG/bolo-5.jpg'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+const data = [
+    { id: '1', image: {bolo_1} },
+    { id: '2', image: {bolo_2} },
+    { id: '3', image: {bolo_3} },
+    { id: '4', image: {bolo_4} },
+    { id: '5', image: {bolo_5} }
+]
+
 
 export default function Projeto(props){
 
@@ -63,8 +73,32 @@ export default function Projeto(props){
 
                 {/* </div> */}
                 {/* ============================================================================================= */}
+                <div>
                 <p>MEU ACERVO DE BOLOS</p>
                 <br></br>
+
+                <Swiper
+                    slidesPerView={1}
+                    pagination={{clickable: true}}
+                    navigation
+                >
+                    {data.map((item) => {
+                        <SwiperSlide key={item.id}>
+                            <img 
+                                src={item.image}
+                                alt="slide"
+                                className="slide-item"
+                             />
+                        </SwiperSlide>
+                    })}
+                </Swiper>
+
+                </div>
+
+
+
+
+
                 {/* <div className="slides">
                     <div className="elements">
 
@@ -76,23 +110,21 @@ export default function Projeto(props){
                         <input type="radio" name="radio-btn" id="radio6" />
 
                         <div className="slide first">
-                            <img src={bolo_slide1} alt="Bolo_slide"></img>
+                            <img src={bolo_1} alt="Bolo_slide"></img>
                         </div>
                         <div className="slide">
-                            <img src={bolo_slide2} alt="Bolo_slide"></img>
+                            <img src={bolo_2} alt="Bolo_slide"></img>
                         </div>
                         <div className="slide">
-                            <img src={bolo_slide3} alt="Bolo_slide"></img>
+                            <img src={bolo_3} alt="Bolo_slide"></img>
                         </div>
                         <div className="slide">
-                            <img src={bolo_slide4} alt="Bolo_slide"></img>
+                            <img src={bolo_4} alt="Bolo_slide"></img>
                         </div>
                         <div className="slide">
-                            <img src={bolo_slide5} alt="Bolo_slide"></img>
+                            <img src={bolo_5} alt="Bolo_slide"></img>
                         </div>
-                        <div className="slide">
-                            <img src={bolo_slide6} alt="Bolo_slide"></img>
-                        </div>
+                        
                     </div>
 
                         <div className="navigation">
@@ -105,7 +137,7 @@ export default function Projeto(props){
                         </div>   
                 </div> */}
 
-                <div className="slides">
+                {/* <div className="slides">
                     <button className="arrow-left control" aria-label="Previous Image">◀</button>
                     <button className="arrow-right control" aria-label="Next Image">▶</button>
                     
@@ -121,15 +153,7 @@ export default function Projeto(props){
                         </div>
 
                     </div>
-                </div>
-
-
-
-
-
-
-
-
+                </div> */}
             </div>
             {/* ============================================================================================= */}
             <div className="footerOrigin">
@@ -190,38 +214,38 @@ export default function Projeto(props){
     )
 }
 
-const controls = document.querySelectorAll('.control')
-let atual_item = 0
-const items = document.querySelectorAll('.item')
-const max_items = items.length
+// const controls = document.querySelectorAll('.control')
+// let atual_item = 0
+// const items = document.querySelectorAll('.item')
+// const max_items = items.length
 
-controls.forEach(control => {
-    control.addEventListener('click', ()=>{
-        const isLeft = control.classList.contains('arrow-left')    
+// controls.forEach(control => {
+//     control.addEventListener('click', ()=>{
+//         const isLeft = control.classList.contains('arrow-left')    
         
-        if(isLeft){
-            atual_item -= 1
-        }else{
-            atual_item += 1
-        }
+//         if(isLeft){
+//             atual_item -= 1
+//         }else{
+//             atual_item += 1
+//         }
 
-        if(atual_item >= max_items){
-            atual_item = 0
-        }
-        if(atual_item < 0){
-            atual_item = max_items - 1
-        }
+//         if(atual_item >= max_items){
+//             atual_item = 0
+//         }
+//         if(atual_item < 0){
+//             atual_item = max_items - 1
+//         }
 
-        items.forEach(item => {
-            item.classList.remove('atual-item')
+//         items.forEach(item => {
+//             item.classList.remove('atual-item')
 
-            items[atual_item].scrollIntoView({
-                inline: 'center',
-                behavior: 'smooth'
-            })
+//             items[atual_item].scrollIntoView({
+//                 inline: 'center',
+//                 behavior: 'smooth'
+//             })
 
-            items[atual_item].classList.add('atual-item')
-        })
+//             items[atual_item].classList.add('atual-item')
+//         })
     
-    })
-})
+//     })
+// })

@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'swiper/css'
+import 'swiper/css/navigation'  // arrows de navegação
+import 'swiper/css/pagination'  // bolinhas de paginação
+import 'swiper/css/scrollbar'   // scroll
+import { register } from 'swiper/element/bundle'
+register()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
