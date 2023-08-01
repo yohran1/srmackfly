@@ -12,11 +12,12 @@
   justify-content: center;
   align-items: center;
 }
-.header{
+header{
   width: 100%;
   padding: 10px;
   display: flex;
   position: sticky; 
+  z-index: 2;
   justify-content: space-between;
   background-color: white;
   top: 0;
@@ -58,13 +59,14 @@
 }
 .contents{
   width: 90%;
-  
+  position: relative;
   margin: auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 .conteudo{
+  position: relative;
   margin: 20px;
   display: flex;
   justify-content: space-between;
@@ -79,7 +81,7 @@
 .arm{
   display: flex;
   width: 28vw;
-  height: 60vh;
+  height: 65vh;
   background-color: rgba(247, 235, 237, 1);
 }
 .no{
