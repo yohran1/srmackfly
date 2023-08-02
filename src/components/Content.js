@@ -31,7 +31,7 @@ export default function Content(props){
                     <div className="conteudo">
                         <div className="arm c4"> <Link className=" box-pedido" to="/pecaOnline"><div className="pedido">Faça seu pedido online</div></Link> </div>
 
-                        <div className="arm c5"> <Link className=" box-pedido" to="/contato"><div className="pedido">Conheça o confeiteiro</div></Link> </div>
+                        <div className="arm c5"> <Link className=" box-pedido" to="/sobre"><div className="pedido">Conheça o confeiteiro</div></Link> </div>
 
                         <div className="arm c6"> <Link className=" box-pedido" to="/pecaOnline"><div className="pedido">Personalize o seu bolo</div></Link> </div>
                     </div>
