@@ -19,8 +19,8 @@ export default function Sobre(props){
                     </div>
                 </div>
                 <div className="contentSobre">
-                    <div>
-                        <img className="divImgSobre" src={confeiteiro} alt="confeiteiro" />
+                    <div className="divImgSobre">
+                        <img src={confeiteiro} alt="confeiteiro" />
                     </div>
                     <div className="descriptionImg">
                         <div className="p">

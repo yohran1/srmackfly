@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FooterDevelop(){
     return(
-        <div className="footer">
+        <div className="footer ">
                 <h2 className="iconn"><div className="iconFooter"></div></h2>
                     <div className="author">Yohran Kallahari | Sr-Mackfly &copy;</div>
                 <div className="socials">
