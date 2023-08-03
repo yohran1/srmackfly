@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function FooterDevelop(){
     return(
         <div className="footer ">
-                <h2 className="iconn"><div className="iconFooter"></div></h2>
+                <h2 className="iconn">
+                    <Link to="/"><div className="iconFooter"></div></Link>
+                </h2>
                     <div className="author">Yohran Kallahari | Sr-Mackfly &copy;</div>
                 <div className="socials">
                     <div className="social">

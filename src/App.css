@@ -218,9 +218,100 @@ li{
 .p{
   width: 80%;
   margin: 80px auto;
-
+  text-align: center;
 }
 /* =================================== Contato =============================================== */
+.contentBackground{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  margin: auto;
+  width: 90%;
+  height: 84vh;
+  background-color: rgba(247, 235, 237, 1);
+}
+.information{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+}
+.infoH1{
+  margin-top: 10px;
+}
+.infoP{
+  text-align: center;
+}
+.infoPessoal{
+  margin: auto;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+
+}
+.infoPessoal p{
+  margin-top: 4px;
+  text-align: center;
+}
+.divContato{
+  width: 60%;
+  height: 450px;
+  background-color: white;
+  margin: auto;
+}
+.form{
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+form input{
+  width: 100%;
+  padding: 10px;
+  margin: 20px auto;
+  border: none;
+  border-bottom: 1px solid rgb(255, 218, 238);
+}
+.boxsForm{
+  display: flex;
+  justify-content: space-between;
+}
+.modelBoxs{
+  width: 48%;
+}
+textarea{
+  border: none;
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid rgb(255, 218, 238);
+}
+.formButton{
+  width: 40%;
+  margin: 30px auto;
+  padding: 10px;
+  border: none;
+  color: gray;
+  background-color: rgb(255, 218, 238);
+}
+.formButton:hover{
+  background-color: rgba(255, 218, 238, 0.589);
+}
+/* ============================= pedidos ========================= */
+.containerPedidos{
+  width: 90%;
+  height: 73vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+
+}
+
 
 
 
@@ -229,6 +320,7 @@ li{
 
 
 .footerOrigin{
+  position: relative;
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -258,6 +350,7 @@ li{
   text-align: justify;
 }
 .footer{
+  position: relative;
   display: flex;
   width: 100%;
   height: 70px;
@@ -410,6 +503,22 @@ li{
     .footer{
       position: relative;
       bottom: 0;
+    }
+    .contentBackground{
+      height: 150vh;
+    }
+    .information{
+      width: 70%;
+      text-align: center;
+    }
+    .infoPessoal p{
+      padding: 5px;
+    }
+    .form{
+      width: 95%;
+    }
+    .divContato{
+      width: 90%;
     }
 }
 @media(max-width: 950px){

@@ -6,7 +6,7 @@ export default function Header(props){
     return (
         <header className="header">
             <div className="logo-menu">
-                <div className="logo"><div className="imgg"></div></div>
+                <div className="logo"><Link to="/"><div className="imgg"></div></Link></div>
                 <div className="box-2">Bolos de Casamento <div>Por Yohran Kallahari</div></div>
             </div>
                     
