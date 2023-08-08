@@ -304,12 +304,87 @@ textarea{
 .containerPedidos{
   width: 90%;
   height: 73vh;
+  background-color: rgb(255, 218, 238);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 50px auto;
 
+}
+/* ============================ Header Pedidos ===================================== */
+.pedidosBox{
+  width: 70%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #4444445d; 
+
+}
+.headerPedidos{
+  width: 100%;
+  height: 30vh;
+  /* background-color: #444; */
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 0;
+
+}
+.retirada{
+  margin-bottom: 10px;
+  border: 1px solid black;
+  padding: 20px;
+  width: 35%;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+.retirada:hover{
+  background-color: rgba(128, 128, 128, 0.26);
+}
+span{
+  color: black;
+}
+.alterar{
+  margin-left: 10px;
+  color: rgb(255, 218, 238);
+  border-bottom: 1px solid rgb(255, 218, 238);
+  cursor: pointer;
+}
+.HeaderMenuPedidos{
+  width: 100%;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+.headerMenu{
+  width: 50%;
+  display: flex;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+.menu-bolo{
+  border-right: 1px solid black;
+}
+.menu-bolo p{
+  cursor: pointer;
+  margin-right: 40px;
+}
+.menu-bolo p:hover{
+  color: rgb(255, 218, 238);
+}
+.headerP{
+  cursor: pointer;
+}
+.headerInfo{
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
@@ -519,6 +594,31 @@ textarea{
     }
     .divContato{
       width: 90%;
+    }
+    .headerPedidos{
+      height: 40vh;
+    }
+    .retirada{
+      width: 100%;
+    }
+    .HeaderMenuPedidos{
+      width: 100%;
+      display: block;
+    }
+    .headerMenu{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .headerP{
+      margin: 0 10px;
+    }
+    .headerInfo{
+      width: 100%;
+    }
+    .headerInfo p{
+      display: block;
     }
 }
 @media(max-width: 950px){
