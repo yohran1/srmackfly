@@ -303,22 +303,22 @@ textarea{
 /* ============================= pedidos ========================= */
 .containerPedidos{
   width: 90%;
-  height: 73vh;
-  background-color: rgb(255, 218, 238);
+  height: 100vh;
+  background-color: rgba(247, 235, 237, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 50px auto;
+  margin: auto;
 
 }
 /* ============================ Header Pedidos ===================================== */
 .pedidosBox{
-  width: 70%;
-  height: 70vh;
+  width: 50%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #4444445d; 
+  /* background-color: #4444445d;  */
 
 }
 .headerPedidos{
@@ -386,6 +386,70 @@ span{
   flex-direction: column;
   justify-content: center;
 }
+/* =============================== container pedidos ================================= */
+.contentPedidos{
+  
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgba(128, 128, 128, 0.26); */
+}
+.pedidos{
+  
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  /* background-color: #444444b0; */
+}
+.cardPedido-1{
+  border: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 45%;
+  height: 150px;
+  /* background-color: aquamarine; */
+}
+.cardPedido-1:hover{
+  background-color: rgba(128, 128, 128, 0.103);
+  cursor: pointer;
+}
+.pedido-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+.pedido-1-divH4{
+  font-size: 14px;
+  margin: 15px auto;
+}
+.pedido-1-div{
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+.boxImg{
+  width: 40%;
+  height: 148px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxImg img{
+  height: 150px;
+}
+.criar{
+  width: 100%;
+}
+.cardPedido-1 span{
+  font-size: 12px;
+}
+
+
+
+
 
 
 
@@ -595,6 +659,9 @@ span{
     .divContato{
       width: 90%;
     }
+    .pedidosBox{
+      width: 90%;
+    }
     .headerPedidos{
       height: 40vh;
     }
@@ -619,6 +686,19 @@ span{
     }
     .headerInfo p{
       display: block;
+    }
+    .containerPedidos{
+      height: 2000px;
+    }
+    .contentPedidos{
+      width: 100%;
+      background-color: red;
+    }
+    .pedidos{
+      height: 31vh;
+    }
+    .cardPedido-1{
+      width: 100%;
     }
 }
 @media(max-width: 950px){
