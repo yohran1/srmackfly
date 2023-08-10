@@ -24,7 +24,7 @@ header{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .logo-menu{
-  width: 15%;
+  width: 35%;
   height: 80%;
   display: flex;
 }
@@ -52,8 +52,10 @@ header{
 }
 .container{
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   text-align: center;
+  display: flex;
+  flex-direction: column;
   /* margin: auto; */
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -173,20 +175,17 @@ li{
   padding: 10px;
 }
 /* ===================================== Sobre ================================================= */
-.contentSobreTop{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .sobre{
   width: 90%;
-  height: 90vh;
+  min-height: 100vh;
   background-color: rgba(247, 235, 237, 1);
-  margin: 50px auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.containerSobre{
+  width: 90%;
 }
 .divSobre{
   display: flex;
@@ -206,7 +205,8 @@ li{
   width: 50%;
 }
 .contentSobre{
-  width: 50%;
+  margin: 50px auto;
+  width: 70%;
   height: 450px;
   display: flex;
   justify-content: space-between;
@@ -214,6 +214,10 @@ li{
 .descriptionImg{
   width: 50%;
   background-color: white;
+}
+.divImgSobre img{
+  width: 100%;
+  height: 450px;
 }
 .p{
   width: 80%;
@@ -225,10 +229,9 @@ li{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
   margin: auto;
   width: 90%;
-  height: 84vh;
+  min-height: 100vh;
   background-color: rgba(247, 235, 237, 1);
 }
 .information{
@@ -246,11 +249,10 @@ li{
   text-align: center;
 }
 .infoPessoal{
-  margin: auto;
+  /* margin: auto; */
   margin-top: 35px;
   display: flex;
   flex-direction: column;
-
 }
 .infoPessoal p{
   margin-top: 4px;
@@ -258,9 +260,8 @@ li{
 }
 .divContato{
   width: 60%;
-  height: 450px;
   background-color: white;
-  margin: auto;
+  margin: 30px auto;
 }
 .form{
   width: 80%;
@@ -303,7 +304,7 @@ textarea{
 /* ============================= pedidos ========================= */
 .containerPedidos{
   width: 90%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgba(247, 235, 237, 1);
   display: flex;
   flex-direction: column;
@@ -313,17 +314,15 @@ textarea{
 
 }
 /* ============================ Header Pedidos ===================================== */
+
 .pedidosBox{
-  width: 50%;
-  height: 100vh;
+  width: 70%;
   display: flex;
   flex-direction: column;
-  /* background-color: #4444445d;  */
-
-}
+ }
 .headerPedidos{
   width: 100%;
-  height: 30vh;
+  height: 25vh;
   /* background-color: #444; */
   display: flex;
   flex-direction: column;
@@ -335,7 +334,7 @@ textarea{
   margin-bottom: 10px;
   border: 1px solid black;
   padding: 20px;
-  width: 35%;
+  width: 55%;
   height: 20px;
   display: flex;
   align-items: center;
@@ -350,8 +349,8 @@ span{
 }
 .alterar{
   margin-left: 10px;
-  color: rgb(255, 218, 238);
-  border-bottom: 1px solid rgb(255, 218, 238);
+  color: rgb(255, 131, 197);
+  border-bottom: 1px solid rgb(255, 158, 210);
   cursor: pointer;
 }
 .HeaderMenuPedidos{
@@ -361,7 +360,7 @@ span{
   align-items: center;
 }
 .headerMenu{
-  width: 50%;
+  width: 65%;
   display: flex;
   padding: 10px;
   justify-content: space-evenly;
@@ -374,7 +373,7 @@ span{
   margin-right: 40px;
 }
 .menu-bolo p:hover{
-  color: rgb(255, 218, 238);
+  color: rgb(255, 158, 210);
 }
 .headerP{
   cursor: pointer;
@@ -388,13 +387,12 @@ span{
 }
 /* =============================== container pedidos ================================= */
 .contentPedidos{
-  
   width: 100%;
-  height: 100vh;
+  margin: 50px auto;
+  /* min-height: 100vh; */
   /* background-color: rgba(128, 128, 128, 0.26); */
 }
 .pedidos{
-  
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -489,7 +487,8 @@ span{
   text-align: justify;
 }
 .footer{
-  position: relative;
+  margin-top: auto;
+  /* position: relative; */
   display: flex;
   width: 100%;
   height: 70px;
@@ -558,7 +557,7 @@ span{
     background-image: url('./IMG/instagram.png');
   }
 
-@media(max-width: 550px){
+@media(max-width: 650px){
     .container{
         padding: 0px;
     }
@@ -644,7 +643,7 @@ span{
       bottom: 0;
     }
     .contentBackground{
-      height: 150vh;
+      min-height: 150vh;
     }
     .information{
       width: 70%;
@@ -688,14 +687,8 @@ span{
       display: block;
     }
     .containerPedidos{
-      height: 2000px;
-    }
-    .contentPedidos{
-      width: 100%;
-      height: 100vh;
-    }
-    .pedidos{
-      height: 100vh;
+      width: 90%;
+      
     }
     .cardPedido-1{
       width: 100%;

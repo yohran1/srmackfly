@@ -1,5 +1,5 @@
 import React from "react";
-import FooterDev from "./FooterDevelop";
+import FooterDevelop from "./FooterDevelop";
 
 export default function Footer(props){
     return (
@@ -39,7 +39,7 @@ export default function Footer(props){
                     </p>
                 </div>
             </div>
-            <FooterDev></FooterDev>
+            <FooterDevelop></FooterDevelop>
     </div> 
     )
 }
