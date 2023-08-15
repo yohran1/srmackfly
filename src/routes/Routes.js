@@ -4,6 +4,7 @@ import Projeto from "../Projeto";
 import Contato from "../components/Contato";
 import Sobre from "../components/Sobre";
 import Login from "../login/Login";
+import Register from "../regisger/Register";
 
 
 function Router(){
@@ -16,6 +17,7 @@ function Router(){
                 <Route path="contato" element={<Contato></Contato>}></Route>
                 <Route path="sobre" element={<Sobre></Sobre>}></Route>
                 <Route path="login" element={<Login></Login>}></Route>
+                <Route path="register" element={<Register></Register>}></Route>
             </Routes>
         
         
