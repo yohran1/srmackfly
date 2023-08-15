@@ -16,7 +16,6 @@ export default function PedidoOn(props){
         <div>
             <Header></Header>
             <div className="containerPedidos">
-            {/* <Header></Header> */}
                 <div className="pedidosBox">
                     <div className="headerPedidos">
                         <div className="retirada"><span>Retirada, o mais rápido possível (em 15 minutos)</span><div className="alterar">Alterar</div></div>
@@ -122,7 +121,6 @@ export default function PedidoOn(props){
                     </div>
 
                 </div>
-                {/* <FooterDevelop></FooterDevelop> */}
             </div>
             <FooterDevelop></FooterDevelop>
         </div>
