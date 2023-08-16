@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom'
 export default function Header(props){
     return (
         <header className="header">
+            <Link to="/">
             <div className="logo-menu">
-                <div className="logo"><Link to="/"><div className="imgg"></div></Link></div>
+                <div className="logo"><div className="imgg"></div></div>
                 <div className="box-2">Bolos de Casamento <div>Por Yohran Kallahari</div></div>
             </div>
-                    
+            </Link>        
             <div className="menu">
                 <ul id="lista">
                     <li><Link to="/">Página Inicial</Link></li>

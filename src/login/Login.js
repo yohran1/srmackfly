@@ -20,7 +20,7 @@ export default function Login(props){
                         Email
                         <div className="inputLogin">
                             <i className="fa-solid fa-envelope"></i>
-                            <input type="email" id="email" name="name" />
+                            <input type="email" id="email" name="name" required/>
                         </div>
                     </label>
                 </div>
@@ -29,7 +29,7 @@ export default function Login(props){
                         Password
                         <div className="inputLogin">
                             <i className="fa-solid fa-key"></i>
-                            <input type="password" id="password" name="name" />
+                            <input type="password" id="password" name="name" required/>
                         </div>
                     </label>
                 </div>

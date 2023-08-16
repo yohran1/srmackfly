@@ -1,5 +1,6 @@
 import React from "react";
 import FooterDevelop from "./FooterDevelop";
+import { Link } from "react-router-dom";
 
 export default function Footer(props){
     return (
@@ -8,8 +9,8 @@ export default function Footer(props){
                 <div className="boxs">
                     <h3>Inicio</h3>
                     <ul>
-                        <li><a href="https://jsonplaceholder.typicode.com/todos">Home</a></li>
-                        <li><a href="https://jsonplaceholder.typicode.com/todos">Produtos</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/pecaOnline">Produtos</Link></li>
                         <li><a href="https://jsonplaceholder.typicode.com/todos">Download</a></li>
                     </ul>
                 </div>
@@ -17,15 +18,15 @@ export default function Footer(props){
                     <h3>Informações</h3>
                     <ul>
                         <li><a href="https://jsonplaceholder.typicode.com/todos">Blog</a></li>
-                        <li><a href="https://jsonplaceholder.typicode.com/todos">Contato</a></li>
-                        <li><a href="https://jsonplaceholder.typicode.com/todos">Email</a></li>
+                        <li><Link to="/contato">Contato</Link></li>
+                        <li><Link to="/contato">Email</Link></li>
                     </ul>
                 </div>
                 <div className="boxs">
                     <h3>Suporte</h3>
                     <ul>
                         <li><a href="https://jsonplaceholder.typicode.com/todos">FAQ</a></li>
-                        <li><a href="https://jsonplaceholder.typicode.com/todos">Telefone</a></li>
+                        <li><Link to="/contato">Telefone</Link></li>
                         <li><a href="https://jsonplaceholder.typicode.com/todos">Chat</a></li>
                     </ul>
                 </div>
