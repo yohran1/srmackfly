@@ -1,6 +1,5 @@
 
 import './App.css';
-
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Projeto from './Projeto';
@@ -23,8 +22,8 @@ export default function App() {
                 <Route path="register" element={<Register></Register>}></Route>
             </Routes>
         
-        
     </BrowserRouter>
+    
   );
 }
 

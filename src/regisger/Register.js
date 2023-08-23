@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import FooterDevelop from "../components/FooterDevelop";
 import GitHub from "./assets/github.png"
 import Facebook from "./assets/facebook.png"
 import { Link } from "react-router-dom";
 
 export default function Register(props){
+
+    const [data, setData] = useState({
+        name: '',
+        email: '',
+        password: ''
+    })
+
+    const valorInput = (event) => setData({...data, [event.target.name]: event.target.value})
+
+    const sendMsg = (event) =>{
+
+        event.preventDefault()
+        console.log(`nome: ${data.name}`)
+        console.log(`Email: ${data.email}`)
+        console.log(`Password: ${data.password}`)
+    }
+
     return (
         <div className="containerLogin">
-            <form className="formLogin" id="form">
+            <form className="formLogin" onSubmit={sendMsg} id="form">
             <div className="headerLogin">
                 <h1>Register</h1>
                 <i className="fa-solid fa-moon icon-moon"> <div className="i-txt">theme</div></i>
@@ -19,7 +36,7 @@ export default function Register(props){
                         Name
                         <div className="inputLogin">
                             <i className="fa-solid fa-user"></i>
-                            <input type="text" id="name" name="name" required/>
+                            <input type="text" id="name" onChange={valorInput} name="name" required/>
                         </div>
                     </label>
                 </div>
@@ -28,7 +45,7 @@ export default function Register(props){
                         Email
                         <div className="inputLogin">
                             <i className="fa-solid fa-envelope"></i>
-                            <input type="email" id="email" name="name" required/>
+                            <input type="email" id="email" onChange={valorInput} name="email" required/>
                         </div>
                     </label>
                 </div>
@@ -37,7 +54,7 @@ export default function Register(props){
                         Password
                         <div className="inputLogin">
                             <i className="fa-solid fa-key"></i>
-                            <input type="password" id="password" name="name" required/>
+                            <input type="password" id="password" onChange={valorInput} name="password" required/>
                         </div>
                     </label>
                 </div>
