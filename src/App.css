@@ -564,6 +564,9 @@
     height: fit-content;
     animation: dark-to-light 0.3s ease-in-out;
   }
+  .formLogin p{
+    margin: auto;
+  }
   .headerLogin{
     display: flex;
     align-items: center;

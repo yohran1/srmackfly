@@ -3,6 +3,7 @@ import FooterDevelop from "../components/FooterDevelop"
 import GitHub from "./assets/github.png"
 import Facebook from "./assets/facebook.png"
 import { Link } from "react-router-dom";
+import axios from "axios"
 
 
 
@@ -14,15 +15,38 @@ const [data, setData] = useState({
     email: '',
     password: ''
 })
+const [message, setMessage] = useState("")
  // Receber os dados dos campos do formulário
  const valorInput = (event) => setData({...data, [event.target.name] : event.target.value})
 
- const sendMsg = (event) => {
+ const sendMsg = async (event) => {
 
     event.preventDefault()
     console.log(`Nome: ${data.email}`)
     console.log(`Senha: ${data.password}`)
- }
+
+    // Criar a constante com o cabeçalho
+    const headers = {
+        'headers': {
+            // Indicar que será enviado os dados em formato de objeto
+            'Content-Type': 'application/json'
+        }
+    }
+    // Fazer a requisição para o servidor utilizando axios, indicando o método da requisição, o endereço, enviar os dados do formulário e o cabeçalho
+    await axios.post('http://localhost:5000/message', data, headers)
+    .then((res)=>{  // Acessar o then quando a API retornar status 200
+        setMessage(res.data.mensagem)
+
+        // Limpar os dados do state e os dados dos campos do formulário
+        setData({
+            email: '',
+            password: ''
+        })
+    }).catch((error)=>{
+        setMessage(error.res.data.mensagem)
+    })
+
+}
 
     return (
         <div className="containerLogin">
@@ -38,7 +62,7 @@ const [data, setData] = useState({
                         Email
                         <div className="inputLogin">
                             <i className="fa-solid fa-envelope"></i>
-                            <input type="email" id="email" name="email" onChange={valorInput} required/>
+                            <input type="email" id="email" name="email" onChange={valorInput} value={data.email} required/>
                         </div>
                     </label>
                 </div>
@@ -47,7 +71,7 @@ const [data, setData] = useState({
                         Password
                         <div className="inputLogin">
                             <i className="fa-solid fa-key"></i>
-                            <input type="password" id="password" name="password" onChange={valorInput} required/>
+                            <input type="password" id="password" name="password" onChange={valorInput} value={data.password} required/>
                         </div>
                     </label>
                 </div>
@@ -70,6 +94,8 @@ const [data, setData] = useState({
                     <img src={GitHub} alt="gitHub-logo" />
                 </a>
             </div>
+
+            {message ? <p>{message}</p> : ""}
 
             </form>
             <FooterDevelop></FooterDevelop>
