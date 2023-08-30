@@ -4,6 +4,88 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
   }
+  #root{
+    display: flex;
+    flex-direction: column;
+  }
+  /* =================================== CardPortfolio ================================================= */
+.containerBody{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./IMG/fundo-1.jpg");
+  background-size: cover;
+}
+.containerCard{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  width: 35%;
+  height: 580px;
+}
+.containerCard:hover{
+  box-shadow: 8px 8px 15px 12px rgba(145, 42, 93, 0.521);
+  border-radius: 20px;
+  background-color: rgba(145, 42, 94, 0.151);
+}
+.pCard{
+  color: white;
+  text-align: justify;
+}
+.perfil-img-Card{
+  background-size:cover;
+  margin: auto;
+  background-image: url('./IMG/y-1.jpg');
+  width: 50%;
+  height: 100vh;
+  border-radius: 50%;
+}
+.nameCard{
+  text-align: center;
+  font-size: 20px;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  color: white;
+}
+.contentCard{
+  text-align: center;
+}
+.listaCard{
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-top: 3vh;
+}
+.listaCard a{
+  text-decoration: none;
+  color: white;
+}
+.listaCard li:hover{
+  background-color: aqua;
+  color: black;
+  padding: 10px;
+  transition: background .3s linear;
+}
+.listaCard li{
+  margin: auto;
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid aqua;
+  border-radius: 20px;
+}
+@media (max-width: 750px){
+  .containerCard{
+      width: 80%;
+      padding: 10px;
+  }
+}
+
+
+
+  /* ============================================================================================================ */
   .menu ul li{ 
     list-style: none;
   }

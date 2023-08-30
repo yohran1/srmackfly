@@ -8,13 +8,15 @@ import Sobre from './components/Sobre';
 import PedidoOn from './components/PedidoOn';
 import Login from './login/Login';
 import Register from './regisger/Register';
+import Home from './components/Home';
 
 export default function App() {
   return (
     <BrowserRouter>
         
             <Routes>
-                <Route path="/" element={<Projeto></Projeto>}></Route>
+                <Route path="/" element={<Home></Home>}></Route>
+                <Route path="/projeto" element={<Projeto></Projeto>}></Route>
                 <Route path="pecaOnline" element={<PedidoOn></PedidoOn>}></Route>
                 <Route path="contato" element={<Contato></Contato>}></Route>
                 <Route path="sobre" element={<Sobre></Sobre>}></Route>

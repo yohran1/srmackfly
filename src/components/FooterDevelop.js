@@ -5,7 +5,7 @@ export default function FooterDevelop(){
     return(
         <div className="footer ">
                 <h2 className="iconn">
-                    <Link to="/"><div className="iconFooter"></div></Link>
+                    <Link to="/projeto"><div className="iconFooter"></div></Link>
                 </h2>
                     <div className="author">Yohran Kallahari | Sr-Mackfly &copy;</div>
                 <div className="socials">
