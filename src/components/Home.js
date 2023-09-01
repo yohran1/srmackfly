@@ -3,6 +3,10 @@ import PDF from './yohran.pdf'
 
 function Home(props){
 
+    const downloadPDF = () => {
+        window.open(PDF, "_blank")
+    }
+
     return(
         <div className='containerBody'>
             <div className='containerCard'>
@@ -11,13 +15,13 @@ function Home(props){
 
                 <div className='contentCard'>
                     <ul className='listaCard'>
-                        <a href='./sobre'>
+                        <a href='./SobrePortifolio'>
                             <li>Sobre Mim</li>
                         </a>
-                        <a href={PDF}>
+                        <button onClick={downloadPDF}>
                             <li>Currículo</li>
-                        </a>
-                        <a href='./projeto'>
+                        </button>
+                        <a href='./login'>
                             <li>Projeto</li>
                         </a>
                         <a href='https://www.linkedin.com/in/yohran-ven%C3%A2ncio-96017b120/'>
